@@ -6,6 +6,8 @@
     <title>Alison Melo | DevOps Portfolio</title>
     <link href="[https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@700&family=JetBrains+Mono&display=swap](https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@700&family=JetBrains+Mono&display=swap)" rel="stylesheet">
     <link rel="stylesheet" href="[https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css)">
+    <link rel="stylesheet" href="[https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css)">
+    
     <style>
         :root {
             --primary: #00d2ff;
@@ -29,7 +31,6 @@
                 radial-gradient(circle at 80% 80%, rgba(0, 210, 255, 0.1) 0%, transparent 40%);
             color: #e2e8f0;
             line-height: 1.6;
-            overflow-x: hidden;
             padding-bottom: 50px;
         }
 
@@ -42,7 +43,6 @@
         header {
             text-align: center;
             margin-bottom: 30px;
-            animation: fadeIn 1s ease-out;
         }
 
         .badge {
@@ -57,12 +57,10 @@
             border: 1px solid rgba(34, 197, 94, 0.2);
             margin-bottom: 25px;
             text-transform: uppercase;
-            letter-spacing: 1px;
         }
 
         .badge .dot {
-            height: 8px;
-            width: 8px;
+            height: 8px; width: 8px;
             background-color: #4ade80;
             border-radius: 50%;
             margin-right: 8px;
@@ -77,7 +75,6 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             margin-bottom: 10px;
-            letter-spacing: 1px;
         }
 
         .project-summary {
@@ -92,10 +89,7 @@
             color: #94a3b8;
         }
 
-        .project-summary strong {
-            color: #fff;
-            font-weight: 600;
-        }
+        .project-summary strong { color: #fff; font-weight: 600; }
 
         .project-summary a {
             color: var(--primary);
@@ -106,17 +100,13 @@
             margin-top: 10px;
         }
 
-        .project-summary a:hover {
-            color: #fff;
-            text-shadow: 0 0 10px var(--primary);
-        }
+        .project-summary a:hover { color: #fff; text-shadow: 0 0 10px var(--primary); }
 
         .flow-section {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 20px;
             margin: 50px 0;
-            position: relative;
         }
 
         .flow-step {
@@ -126,20 +116,14 @@
             padding: 25px;
             text-align: center;
             backdrop-filter: blur(12px);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transition: all 0.4s ease;
             position: relative;
-            z-index: 2;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
         }
 
         .flow-step:hover {
-            transform: translateY(-12px);
-            background: rgba(255, 255, 255, 0.06);
+            transform: translateY(-10px);
             border-color: var(--primary);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            background: rgba(255, 255, 255, 0.06);
         }
 
         .flow-step:not(:last-child)::after {
@@ -147,42 +131,24 @@
             font-family: "Font Awesome 6 Free";
             font-weight: 900;
             position: absolute;
-            right: -20px;
+            right: -15px;
             top: 50%;
             transform: translateY(-50%);
             color: var(--border);
-            font-size: 1.2rem;
-            z-index: 1;
+            font-size: 1rem;
         }
 
-        .flow-step .icon-container {
+        .icon-box {
+            font-size: 3rem;
             margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 55px;
-        }
-
-        .flow-step i.fa-brands { font-size: 2.8rem; }
-        .flow-step img { height: 48px; width: 48px; object-fit: contain; }
-
-        .flow-step h3 {
-            font-family: 'Poppins', sans-serif;
-            font-size: 1.1rem;
-            margin-bottom: 5px;
-            color: #fff;
-        }
-
-        .flow-step p {
-            font-size: 0.75rem;
-            color: #94a3b8;
+            display: block;
+            height: 60px;
         }
 
         .details-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            margin-top: 40px;
+            gap: 20px;
         }
 
         .detail-card {
@@ -195,88 +161,45 @@
         .detail-card h4 {
             font-family: 'JetBrains Mono', monospace;
             color: var(--primary);
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
+            margin-bottom: 10px;
         }
 
-        .detail-card h4 i { margin-right: 10px; font-size: 0.9rem; }
-
-        .detail-card ul {
-            list-style: none;
-            font-size: 0.85rem;
-            color: #94a3b8;
-        }
-
-        .detail-card ul li {
-            margin-bottom: 8px;
-            display: flex;
-            align-items: flex-start;
-        }
-
-        .detail-card ul li::before {
-            content: "→";
-            color: var(--primary);
-            margin-right: 8px;
-        }
+        .detail-card ul { list-style: none; font-size: 0.85rem; color: #94a3b8; }
+        .detail-card ul li { margin-bottom: 5px; }
+        .detail-card ul li::before { content: "→ "; color: var(--primary); }
 
         footer {
             text-align: center;
-            margin-top: 70px;
-            padding-top: 40px;
+            margin-top: 60px;
+            padding-top: 30px;
             border-top: 1px solid var(--border);
             color: #64748b;
             font-size: 0.8rem;
         }
 
-        .stack-pills {
-            display: flex;
-            justify-content: center;
-            gap: 12px;
-            margin-bottom: 20px;
-            flex-wrap: wrap;
-        }
-
         .pill {
             background: rgba(255,255,255,0.05);
-            padding: 4px 12px;
+            padding: 4px 10px;
             border-radius: 4px;
-            border: 1px solid var(--border);
             font-family: 'JetBrains Mono', monospace;
             font-size: 0.7rem;
+            margin: 0 5px;
         }
 
-        @keyframes pulse {
-            0% { opacity: 1; }
-            50% { opacity: 0.4; }
-            100% { opacity: 1; }
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+        @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.4; } 100% { opacity: 1; } }
 
         @media (max-width: 900px) {
-            h1.main-title { font-size: 1.8rem; }
-            .flow-section { grid-template-columns: repeat(2, 1fr); gap: 15px; }
-            .flow-step:not(:last-child)::after { display: none; }
+            .flow-section { grid-template-columns: repeat(2, 1fr); }
+            .flow-step:after { display: none; }
         }
-
-        @media (max-width: 500px) {
-            h1.main-title { font-size: 1.6rem; }
-            .flow-section { grid-template-columns: 1fr; }
-        }
+        @media (max-width: 500px) { .flow-section { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
 
     <div class="container">
         <header>
-            <div class="badge">
-                <span class="dot"></span>
-                Infraestrutura Ativa e Monitorada
-            </div>
+            <div class="badge"><span class="dot"></span> Infraestrutura Ativa</div>
             <h1 class="main-title">DevOps Portfolio Project</h1>
         </header>
 
@@ -284,46 +207,34 @@
             <p>
                 Olá, meu nome é <strong>Alison Melo</strong>. Bem-vindo! Esta página demonstra um pipeline <strong>CI/CD End-to-End</strong> totalmente automatizado, focado em <em>Infrastructure as Code</em> (IaC) na Oracle Cloud.
             </p>
-            <p>
-                Para acessar o código-fonte (Terraform, Ansible e Docker), visite o repositório oficial:
-                <br>
-                <a href="[https://github.com/alison-melo/devops-portfolio-project](https://github.com/alison-melo/devops-portfolio-project)" target="_blank">
-                    <i class="fa-brands fa-github"></i> Ver repositório no GitHub
-                </a>
-            </p>
+            <a href="[https://github.com/alison-melo/devops-portfolio-project](https://github.com/alison-melo/devops-portfolio-project)" target="_blank">
+                <i class="fa-brands fa-github"></i> Ver repositório oficial no GitHub
+            </a>
         </section>
 
         <section class="flow-section">
             <div class="flow-step">
-                <div class="icon-container">
-                    <i class="fa-brands fa-github" style="color: var(--accent-github);"></i>
-                </div>
+                <i class="fa-brands fa-github icon-box" style="color: var(--accent-github);"></i>
                 <h3>Git Push</h3>
-                <p>O gatilho do ciclo. Todo código é versionado e auditado.</p>
+                <p>O gatilho do ciclo automático.</p>
             </div>
             
             <div class="flow-step">
-                <div class="icon-container">
-                    <img src="[https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg)" alt="Terraform">
-                </div>
+                <i class="devicon-terraform-plain colored icon-box"></i>
                 <h3>Terraform</h3>
-                <p>Provisionamento automático de rede e VM na Oracle Cloud.</p>
+                <p>Provisionamento de infraestrutura.</p>
             </div>
 
             <div class="flow-step">
-                <div class="icon-container">
-                    <img src="[https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ansible/ansible-original.svg](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ansible/ansible-original.svg)" alt="Ansible">
-                </div>
+                <i class="devicon-ansible-plain colored icon-box"></i>
                 <h3>Ansible</h3>
-                <p>Configuração do S.O, Firewall e instalação do Runtime.</p>
+                <p>Configuração e Gerenciamento.</p>
             </div>
 
             <div class="flow-step">
-                <div class="icon-container">
-                    <i class="fa-brands fa-docker" style="color: var(--accent-docker);"></i>
-                </div>
+                <i class="fa-brands fa-docker icon-box" style="color: var(--accent-docker);"></i>
                 <h3>Docker</h3>
-                <p>Deploy da aplicação em container isolado e portável.</p>
+                <p>Deploy em container isolado.</p>
             </div>
         </section>
 
@@ -331,40 +242,34 @@
             <div class="detail-card">
                 <h4><i class="fa-solid fa-code-branch"></i> CI/CD Pipeline</h4>
                 <ul>
-                    <li>GitHub Actions orquestrando o deploy contínuo.</li>
-                    <li>Segurança via SSH Secrets (id_rsa).</li>
-                    <li>Pipeline automatizado do push ao ambiente de prod.</li>
+                    <li>GitHub Actions orquestrando o deploy.</li>
+                    <li>Segurança via SSH Secrets.</li>
                 </ul>
             </div>
-
             <div class="detail-card">
-                <h4><i class="fa-solid fa-server"></i> Cloud Infrastructure</h4>
+                <h4><i class="fa-solid fa-server"></i> Cloud Infra</h4>
                 <ul>
-                    <li>Oracle Cloud (OCI) - Ashburn Region.</li>
-                    <li>Instância AMD VM.Standard.E2.1.Micro.</li>
-                    <li>Rede isolada via VCN e Security Lists.</li>
+                    <li>Oracle Cloud (OCI) - Ashburn.</li>
+                    <li>Instância AMD VM.Standard.</li>
                 </ul>
             </div>
-
             <div class="detail-card">
                 <h4><i class="fa-solid fa-shield-halved"></i> OS Hardening</h4>
                 <ul>
-                    <li>Configuração automatizada de IPTables via Ansible.</li>
-                    <li>Ambiente imutável via Docker Nginx-Alpine.</li>
-                    <li>Gestão de acesso via chaves SSH autorizadas.</li>
+                    <li>Firewall IPTables via Ansible.</li>
+                    <li>Docker Nginx-Alpine Imutável.</li>
                 </ul>
             </div>
         </div>
 
         <footer>
-            <div class="stack-pills">
-                <span class="pill">HCL / Terraform</span>
-                <span class="pill">YAML / Ansible</span>
-                <span class="pill">Docker Engine</span>
-                <span class="pill">Linux / Ubuntu</span>
+            <p>
+                <span class="pill">Terraform</span>
+                <span class="pill">Ansible</span>
+                <span class="pill">Docker</span>
                 <span class="pill">Oracle Cloud</span>
-            </div>
-            <p>© 2026 Alison Melo • Provisionado via Infra-as-Code</p>
+            </p>
+            <p style="margin-top: 15px;">© 2026 Alison Melo • Provisionado via Infra-as-Code</p>
         </footer>
     </div>
 
