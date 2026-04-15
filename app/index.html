@@ -97,14 +97,13 @@
             font-weight: 600;
         }
 
-        /* CORREÇÃO DO LINK AQUI */
         .project-summary a {
             color: var(--primary);
             text-decoration: none;
             font-weight: 600;
             transition: all 0.3s;
             display: inline-block;
-            margin-top: 5px;
+            margin-top: 10px;
         }
 
         .project-summary a:hover {
@@ -165,7 +164,7 @@
         }
 
         .flow-step i.fa-brands { font-size: 2.8rem; }
-        .flow-step img { height: 48px; width: auto; }
+        .flow-step img { height: 48px; width: 48px; object-fit: contain; }
 
         .flow-step h3 {
             font-family: 'Poppins', sans-serif;
@@ -283,9 +282,9 @@
 
         <section class="project-summary">
             <p>
-                Olá, meu nome é <strong>Alison Melo</strong>. Bem-vindo! Esta página é a vitrine de um projeto que demonstra um pipeline <strong>CI/CD End-to-End</strong> totalmente automatizado, focado em <em>Infrastructure as Code</em> (IaC) na Oracle Cloud.
+                Olá, meu nome é <strong>Alison Melo</strong>. Bem-vindo! Esta página demonstra um pipeline <strong>CI/CD End-to-End</strong> totalmente automatizado, focado em <em>Infrastructure as Code</em> (IaC) na Oracle Cloud.
             </p>
-            <p style="margin-top: 15px;">
+            <p>
                 Para acessar o código-fonte (Terraform, Ansible e Docker), visite o repositório oficial:
                 <br>
                 <a href="[https://github.com/alison-melo/devops-portfolio-project](https://github.com/alison-melo/devops-portfolio-project)" target="_blank">
@@ -305,7 +304,7 @@
             
             <div class="flow-step">
                 <div class="icon-container">
-                    <img src="[https://raw.githubusercontent.com/devicons/devicon/master/icons/terraform/terraform-original.svg](https://raw.githubusercontent.com/devicons/devicon/master/icons/terraform/terraform-original.svg)" alt="Terraform">
+                    <img src="[https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg)" alt="Terraform">
                 </div>
                 <h3>Terraform</h3>
                 <p>Provisionamento automático de rede e VM na Oracle Cloud.</p>
@@ -313,7 +312,7 @@
 
             <div class="flow-step">
                 <div class="icon-container">
-                    <img src="[https://raw.githubusercontent.com/devicons/devicon/master/icons/ansible/ansible-original.svg](https://raw.githubusercontent.com/devicons/devicon/master/icons/ansible/ansible-original.svg)" alt="Ansible">
+                    <img src="[https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ansible/ansible-original.svg](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ansible/ansible-original.svg)" alt="Ansible">
                 </div>
                 <h3>Ansible</h3>
                 <p>Configuração do S.O, Firewall e instalação do Runtime.</p>
@@ -365,7 +364,7 @@
                 <span class="pill">Linux / Ubuntu</span>
                 <span class="pill">Oracle Cloud</span>
             </div>
-            <p>© 2026 Alison Melo • Este site foi provisionado via Infra-as-Code</p>
+            <p>© 2026 Alison Melo • Provisionado via Infra-as-Code</p>
         </footer>
     </div>
 
