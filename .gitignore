@@ -1,0 +1,12 @@
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.backup
+*.tfvars
+.terraform.lock.hcl
+
+# Chaves e Segredos
+*.pem
+*.key
+*.pub
+oci_api_key.pem

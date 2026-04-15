@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zero to Prod - Portfólio DevOps</title>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #1e293b;
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0 0 1rem 0;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #cbd5e1;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: -2rem auto 2rem auto;
+            padding: 0 20px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 1rem;
+        }
+
+        .tech-badge {
+            background-color: #eff6ff;
+            color: var(--primary-color);
+            border: 1px solid #bfdbfe;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .process-step {
+            display: flex;
+            margin-bottom: 1.5rem;
+            align-items: flex-start;
+        }
+
+        .step-icon {
+            background-color: var(--primary-color);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+            margin-right: 15px;
+        }
+
+        .step-content h3 {
+            margin: 0 0 0.5rem 0;
+            color: var(--text-main);
+        }
+
+        .step-content p {
+            margin: 0;
+            color: var(--text-muted);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>🚀 Zero to Prod na OCI</h1>
+        <p>Demonstração prática de uma esteira de CI/CD de ponta a ponta, integrando containers, IaC e automação na Oracle Cloud.</p>
+    </header>
+
+    <div class="container">
+        
+        <div class="card">
+            <h2>Sobre o Projeto</h2>
+            <p>Olá! Meu nome é <strong>Alison Melo</strong>. Esta página foi provisionada e configurada 100% via código.</p>
+            <p>O objetivo deste laboratório é demonstrar a entrega automatizada de software, aplicando as melhores práticas de DevOps. Desde o commit no repositório até o servidor online, não houve intervenção manual.</p>
+        </div>
+
+        <div class="card">
+            <h2>🧰 Stack Tecnológico</h2>
+            <div class="tech-stack">
+                <span class="tech-badge">Docker</span>
+                <span class="tech-badge">GitHub Actions</span>
+                <span class="tech-badge">GitHub Container Registry</span>
+                <span class="tech-badge">Terraform</span>
+                <span class="tech-badge">Ansible</span>
+                <span class="tech-badge">Oracle Cloud (OCI)</span>
+                <span class="tech-badge">Linux (Ubuntu)</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>⚙️ A Esteira de Automação (CI/CD)</h2>
+            
+            <div class="process-step">
+                <div class="step-icon">1</div>
+                <div class="step-content">
+                    <h3>CI (Build & Push)</h3>
+                    <p>O código-fonte e o Dockerfile são analisados pelo GitHub Actions. A imagem da aplicação é construída e enviada com segurança para o registro do GitHub (GHCR).</p>
+                </div>
+            </div>
+
+            <div class="process-step">
+                <div class="step-icon">2</div>
+                <div class="step-content">
+                    <h3>IaC (Provisionamento)</h3>
+                    <p>A pipeline aciona o Terraform, que se autentica na Oracle Cloud e provisiona a infraestrutura base: Virtual Cloud Network, Subnets, regras de Firewall e a máquina virtual (Compute Instance).</p>
+                </div>
+            </div>
+
+            <div class="process-step">
+                <div class="step-icon">3</div>
+                <div class="step-content">
+                    <h3>Configuration Management</h3>
+                    <p>Com a máquina no ar, o Ansible assume o controle via SSH. Ele atualiza os pacotes do sistema operacional, instala o motor do Docker e prepara o ambiente para receber a aplicação.</p>
+                </div>
+            </div>
+
+            <div class="process-step">
+                <div class="step-icon">4</div>
+                <div class="step-content">
+                    <h3>Deploy</h3>
+                    <p>Por fim, a imagem Docker mais recente é baixada do registro na nuvem e o container é executado, expondo a aplicação na porta web padrão. O ciclo se completa com sucesso!</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer>
+        <p>Desenvolvido para demonstração de habilidades práticas em Engenharia DevOps e Cloud Computing.</p>
+    </footer>
+
+</body>
+</html>

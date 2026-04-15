@@ -1,0 +1,43 @@
+---
+- name: Preparar servidor e subir Container
+  hosts: webservers
+  become: yes  # Executa como sudo (root)
+  tasks:
+    - name: Atualizar pacotes do sistema
+      apt:
+        update_cache: yes
+        upgrade: dist
+
+    - name: Instalar Docker
+      apt:
+        name: docker.io
+        state: present
+
+    - name: Garantir que o Docker está rodando
+      service:
+        name: docker
+        state: started
+        enabled: yes
+
+    - name: Criar pasta da aplicação na VM
+      file:
+        path: /home/ubuntu/meu-app
+        state: directory
+        owner: ubuntu
+        group: ubuntu
+
+    - name: Enviar arquivos do projeto (HTML e Dockerfile)
+      copy:
+        # Adicionamos o "app/" no caminho
+        src: "../app/{{ item }}"  
+        dest: "/home/ubuntu/meu-app/{{ item }}"
+      loop:
+        - index.html
+        - Dockerfile
+
+    - name: Build da imagem e execução do Container
+      shell: |
+        cd /home/ubuntu/meu-app
+        docker build -t portfolio-nginx .
+        docker rm -f site-web || true
+        docker run -d --name site-web -p 80:80 portfolio-nginx
