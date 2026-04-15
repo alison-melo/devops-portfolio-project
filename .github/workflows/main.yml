@@ -1,0 +1,33 @@
+name: Deploy via Ansible
+
+on:
+  push:
+    branches: [ main ] # Dispara sempre que você enviar para a branch main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Configurar chave SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+
+      - name: Instalar Ansible
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ansible
+
+      - name: Rodar Ansible Playbook
+        run: |
+          cd ansible
+          # Substituímos o caminho da chave no hosts.ini dinamicamente para o GitHub
+          ansible-playbook -i hosts.ini deploy.yml \
+            --private-key ~/.ssh/id_rsa \
+            -e "ansible_ssh_private_key_file=~/.ssh/id_rsa"
+        env:
+          ANSIBLE_HOST_KEY_CHECKING: "False" # Para o GitHub não travar perguntando se confia no IP
