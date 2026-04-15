@@ -4,11 +4,11 @@
 Este projeto é uma demonstração prática de um ciclo **CI/CD End-to-End**, focado em automação total, provisionamento como código e resiliência em nuvem.
 
 <p align="left">
-  <img src="[https://raw.githubusercontent.com/devicons/devicon/master/icons/terraform/terraform-original.svg](https://raw.githubusercontent.com/devicons/devicon/master/icons/terraform/terraform-original.svg)" title="Terraform" alt="Terraform" width="40" height="40"/>&nbsp;
-  <img src="[https://raw.githubusercontent.com/devicons/devicon/master/icons/ansible/ansible-original.svg](https://raw.githubusercontent.com/devicons/devicon/master/icons/ansible/ansible-original.svg)" title="Ansible" alt="Ansible" width="40" height="40"/>&nbsp;
-  <img src="[https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg](https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg)" title="Docker" alt="Docker" width="40" height="40"/>&nbsp;
-  <img src="[https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg](https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg)" title="GitHub Actions" alt="GitHub Actions" width="40" height="40"/>&nbsp;
-  <img src="[https://raw.githubusercontent.com/devicons/devicon/master/icons/ubuntu/ubuntu-plain.svg](https://raw.githubusercontent.com/devicons/devicon/master/icons/ubuntu/ubuntu-plain.svg)" title="Ubuntu" alt="Ubuntu" width="40" height="40"/>&nbsp;
+  <img src="[https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg)" title="Terraform" alt="Terraform" width="40" height="40"/>&nbsp;
+  <img src="[https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ansible/ansible-original.svg](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ansible/ansible-original.svg)" title="Ansible" alt="Ansible" width="40" height="40"/>&nbsp;
+  <img src="[https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg)" title="Docker" alt="Docker" width="40" height="40"/>&nbsp;
+  <img src="[https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-original.svg](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-original.svg)" title="GitHub Actions" alt="GitHub Actions" width="40" height="40"/>&nbsp;
+  <img src="[https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ubuntu/ubuntu-plain.svg](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ubuntu/ubuntu-plain.svg)" title="Ubuntu" alt="Ubuntu" width="40" height="40"/>&nbsp;
 </p>
 
 ---
