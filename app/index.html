@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alison Melo | DevOps Portfolio</title>
-    <link href="[https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@700&family=JetBrains+Mono&display=swap](https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@700&family=JetBrains+Mono&display=swap)" rel="stylesheet">
-    <link rel="stylesheet" href="[https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css)">
-    <link rel="stylesheet" href="[https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css](https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css)">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <style>
         :root {
@@ -139,10 +138,16 @@
         }
 
         .icon-box {
-            font-size: 3rem;
             margin-bottom: 15px;
-            display: block;
-            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50px;
+        }
+
+        .icon-box img {
+            max-height: 40px;
+            width: auto;
         }
 
         .details-grid {
@@ -207,32 +212,40 @@
             <p>
                 Olá, meu nome é <strong>Alison Melo</strong>. Bem-vindo! Esta página demonstra um pipeline <strong>CI/CD End-to-End</strong> totalmente automatizado, focado em <em>Infrastructure as Code</em> (IaC) na Oracle Cloud.
             </p>
-            <a href="[https://github.com/alison-melo/devops-portfolio-project](https://github.com/alison-melo/devops-portfolio-project)" target="_blank">
+            <a href="https://github.com/alison-melo/devops-portfolio-project" target="_blank">
                 <i class="fa-brands fa-github"></i> Ver repositório oficial no GitHub
             </a>
         </section>
 
         <section class="flow-section">
             <div class="flow-step">
-                <i class="fa-brands fa-github icon-box" style="color: var(--accent-github);"></i>
+                <div class="icon-box">
+                    <img src="https://img.shields.io/badge/GIT-GitHub-white?style=for-the-badge&logo=github&logoColor=black" alt="GitHub">
+                </div>
                 <h3>Git Push</h3>
                 <p>O gatilho do ciclo automático.</p>
             </div>
             
             <div class="flow-step">
-                <i class="devicon-terraform-plain colored icon-box"></i>
+                <div class="icon-box">
+                    <img src="https://img.shields.io/badge/Terraform-5835CC?style=for-the-badge&logo=terraform&logoColor=white" alt="Terraform">
+                </div>
                 <h3>Terraform</h3>
                 <p>Provisionamento de infraestrutura.</p>
             </div>
 
             <div class="flow-step">
-                <i class="devicon-ansible-plain colored icon-box"></i>
+                <div class="icon-box">
+                    <img src="https://img.shields.io/badge/Ansible-EE0000?style=for-the-badge&logo=ansible&logoColor=white" alt="Ansible">
+                </div>
                 <h3>Ansible</h3>
                 <p>Configuração e Gerenciamento.</p>
             </div>
 
             <div class="flow-step">
-                <i class="fa-brands fa-docker icon-box" style="color: var(--accent-docker);"></i>
+                <div class="icon-box">
+                    <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker">
+                </div>
                 <h3>Docker</h3>
                 <p>Deploy em container isolado.</p>
             </div>

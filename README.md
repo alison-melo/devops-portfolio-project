@@ -4,11 +4,12 @@
 Este projeto é uma demonstração prática de um ciclo **CI/CD End-to-End**, focado em automação total, provisionamento como código e resiliência em nuvem.
 
 <p align="left">
-  <img src="[https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg)" title="Terraform" alt="Terraform" width="40" height="40"/>&nbsp;
-  <img src="[https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ansible/ansible-original.svg](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ansible/ansible-original.svg)" title="Ansible" alt="Ansible" width="40" height="40"/>&nbsp;
-  <img src="[https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg)" title="Docker" alt="Docker" width="40" height="40"/>&nbsp;
-  <img src="[https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-original.svg](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-original.svg)" title="GitHub Actions" alt="GitHub Actions" width="40" height="40"/>&nbsp;
-  <img src="[https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ubuntu/ubuntu-plain.svg](https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ubuntu/ubuntu-plain.svg)" title="Ubuntu" alt="Ubuntu" width="40" height="40"/>&nbsp;
+  <img src="https://img.shields.io/badge/terraform-%235835CC.svg?style=for-the-badge&logo=terraform&logoColor=white" alt="Terraform" />&nbsp;
+  <img src="https://img.shields.io/badge/ansible-%23EE0000.svg?style=for-the-badge&logo=ansible&logoColor=white" alt="Ansible" />&nbsp;
+  <img src="https://img.shields.io/badge/docker-%232496ed.svg?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" />&nbsp;
+  <img src="https://img.shields.io/badge/github%20actions-%232088FF.svg?style=for-the-badge&logo=githubactions&logoColor=white" alt="GitHub Actions" />&nbsp;
+  <img src="https://img.shields.io/badge/ubuntu-%23E95420.svg?style=for-the-badge&logo=ubuntu&logoColor=white" alt="Ubuntu" />&nbsp;
+  <img src="https://img.shields.io/badge/oracle-%23F80000.svg?style=for-the-badge&logo=oracle&logoColor=white" alt="Oracle Cloud" />
 </p>
 
 ---
